@@ -1,0 +1,159 @@
+/*import font*/
+
+@font-face {
+  font-family: "Snell Roundhand";
+  src: url("fonts/SnellRoundhand.ttc") format("truetype");
+}
+
+:root {
+	--caramel: #DABE7F;
+	--taro: #D5BFCC ;
+	--choco: #614934 ;
+	--orange: #FBAC36 ;
+}
+
+/* --------- general --------- */
+
+body {
+	font-family: Helvetica, sans-serif;
+	line-height: 1.15;
+	background-color: var(--caramel);
+	color: var(--choco);
+	font-size: 20px;
+}
+
+button {
+	padding: 0.5em;
+	border-radius: .25em;
+}
+
+button.left {
+	background-color: var(--choco);
+	color: var(--taro);
+}
+
+button.right {
+	background-color: var(--taro);
+	color: var(--choco);
+}
+
+button:hover {
+	background-color: var(--orange);
+	color: var(--choco);
+}
+
+h1 {
+	font-weight: 400;
+}
+
+h1.eng {
+	font-family: Menlo, monospace;
+}
+
+h1.pg {
+	font-family: "Snell Roundhand", cursive;
+}
+
+::selection {
+  background-color: var(--choco);
+  color: var(--caramel);
+}
+
+/* --------- scrollbar --------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--taro); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--choco); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange); 
+}
+
+/* --------- landing --------- */
+
+#landing {
+	background-image: url(assets/01-landing/03-Landing.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+/* --------- section spacing --------- */
+
+section {
+	height: 100vh;
+	padding: 2rem;
+}
+
+#survey, #kitchen, #lunchroom {
+	height: 100%;
+	padding: 5rem 2rem;
+}
+
+/* --------- survey --------- */
+
+#survey {
+	background-color: var(--taro);
+}
+
+#survey label {
+	margin-top: 2rem;
+	display: block;
+}
+
+#survey input[type="text"] {
+	color: var(--choco);
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px dashed var(--choco);
+	padding: 1rem;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+#survey input[type="submit"] {
+	color: var(--taro);
+	background-color: var(--choco);
+	padding: 0.5em;
+	border-radius: .25em;
+}
+
+/* --------- kitchen --------- */
+
+
+.mise-en-scene {
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+}
+
+.fridge {
+	grid-area: 1 / 1 / 3 / 2;
+	cursor: pointer;
+}
+
+.paperbag {
+	grid-area: 1 / 2 / 1 / 2;
+	max-width: 50%;
+	justify-self: center;
+	align-self: center;
+}
+
+.counters {grid-area: 1/ 2/ 3/ 5;}
+
+.door {
+	grid-area: 1/ 4/ 3/ 5;
+	max-width: 50%;
+	justify-self: end;
+    align-self: end;
+}
